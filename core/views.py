@@ -47,8 +47,7 @@ RETRIABLE_EXCEPTIONS = (httplib2.HttpLib2Error, IOError, httplib.NotConnected,
   httplib.CannotSendRequest, httplib.CannotSendHeader,
   httplib.ResponseNotReady, httplib.BadStatusLine)
 
-# Always retry when an apiclient.errors.HttpError with one of these status
-# codes is raised.
+
 RETRIABLE_STATUS_CODES = [500, 502, 503, 504]
 
 CLIENT_SECRETS_FILE = "C:\Dev\Django-work\django_api\django_api\client_secret.json"
