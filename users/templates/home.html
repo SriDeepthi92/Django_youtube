@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <title>Youtube Uploader</title>
+</head>
+<body>
+
+    <div style="padding: 10%;display: flex;justify-content: center;">
+      <div class="form-group">
+        <form method="POST" action="." enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+
+
+
+</body>
+{% endblock %}

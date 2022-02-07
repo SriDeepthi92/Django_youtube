@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <title>Youtube Uploader</title>
+</head>
+<body>
+  <div align="center">
+    <br>
+    <h3> Your video has been uploaded </h3>
+    <a href="https://studio.youtube.com/channel/UCgZdJVpAJb13Ury6g_2jgjw/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D"><img src="{% static 'youtue.png' %}" style="width:100px;height:90px;"></a>
+    <br>
+    <br>
+    </div>
+    <div align="center">
+
+    <a href="{% url 'home' %}" class="btn btn-secondary" role="button" aria-disabled="true">Add another video</a>
+
+    </div>
+
+</body>
+{% endblock %}

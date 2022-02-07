@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div align="center">
+  <br>
+
+<h1>  <img src="{% static 'youtue.png' %}"  height=200 width=200> Uploader</h1>
+<br>
+<br>
+<body>
+{% if user.is_authenticated %}
+  <p class="text-light">Welcome, You are logged in as {{ user.username }}</p>
+  <br>
+  <br>
+<button type="button" class="btn btn-outline-light"><a href="{% url 'home' %}"> Add a video</a> </button>
+
+{% else %}
+<a href="{% provider_login_url 'google' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"><img src="{% static 'google1.png' %}" style="width:42px;height:42px;"> Login With Google</a>
+{% endif %}
+</body>
+</div>
+{% endblock %}
