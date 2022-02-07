@@ -135,8 +135,8 @@ MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
 
-GOOGLE_OAUTH2_CLIENT_ID = '294825964874-8g05r83mmmj2qnd0digp878ebbnq3n0s.apps.googleusercontent.com'
-GOOGLE_OAUTH2_CLIENT_SECRET = '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'
+GOOGLE_OAUTH2_CLIENT_ID = 'CLIENT_ID'
+GOOGLE_OAUTH2_CLIENT_SECRET = 'Secret_key'
 GOOGLE_OAUTH2_CALLBACK_VIEW = 'oauth2callback'  # your oauth callback view name
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -149,9 +149,9 @@ YT_JSON_FILE = BASE_DIR+'/core/client_secret.json'
 key_file = json.load(open(YT_JSON_FILE))
 """
 #YOUTUBE API CREDENTIALS
-YT_API_KEY = 'AIzaSyADe3UpQg5m04sdFkxoFw8f7HgmG-pIFsU'
-YT_CLIENT_SECRET = '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'
-YT_CLIENT_ID = '294825964874-8g05r83mmmj2qnd0digp878ebbnq3n0s.apps.googleusercontent.com'
+YT_API_KEY = 'APIkey'
+YT_CLIENT_SECRET = 'Secret_key'
+YT_CLIENT_ID = 'CLIENT_ID'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
