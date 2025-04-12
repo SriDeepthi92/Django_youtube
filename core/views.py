@@ -150,3 +150,9 @@ class HomeView(FormView):
 
 def result(request):
     return render(request, 'result.html')
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def index(request):
+    return render(request, 'index.html')
